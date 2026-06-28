@@ -1,0 +1,141 @@
+:root {
+  --bg: #f5d6b4;
+  --wine: #6f1d1b;
+  --cream: #fff7ed;
+  --accent: #c85c3b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  background: linear-gradient(135deg, #fbe6c9, var(--bg));
+  color: var(--wine);
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 32px;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.logo-img {
+  height: 90px;
+  object-fit: contain;
+}
+
+.topbar a {
+  text-decoration: none;
+  color: var(--wine);
+  font-weight: bold;
+}
+
+.confirmacao {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.card-produto {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 18px;
+  width: min(900px, 100%);
+  background: var(--cream);
+  border: 2px solid var(--wine);
+  border-radius: 22px;
+  padding: 20px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+.imagem-produto {
+  width: 100%;
+  min-height: 280px;
+  object-fit: cover;
+  border: 2px solid var(--wine);
+  border-radius: 18px;
+  background: #f8e0c8;
+}
+
+.detalhes h1 {
+  margin: 0 0 8px;
+  font-size: 24px;
+}
+
+.categoria {
+  margin: 0 0 8px;
+  font-weight: bold;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.descricao {
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.preco-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.preco {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.status {
+  background: #e6f8ec;
+  color: #1f7a3b;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: bold;
+}
+
+.lista-info {
+  padding-left: 18px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.acoes {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn-confirmar,
+.btn-secundario {
+  border: none;
+  border-radius: 999px;
+  padding: 12px 18px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-confirmar {
+  background: linear-gradient(135deg, var(--accent), var(--wine));
+  color: white;
+}
+
+.btn-secundario {
+  background: #f2d9bb;
+  color: var(--wine);
+}
+
+@media (max-width: 820px) {
+  .card-produto {
+    grid-template-columns: 1fr;
+  }
+}

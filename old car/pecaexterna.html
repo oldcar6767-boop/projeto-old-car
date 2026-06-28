@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css-old-car/pecaexterna.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <title>Old Car</title>
+  </head>
+  <body>
+    <div class="container">
+      <aside class="sidebar">
+        <img alt="logo old car" src="imagens/logo_oldcar.png" class="logo" />
+
+        <nav>
+          <a href="lataria.html">Lataria</a>
+
+          <a href="pecainterna.html">Peças internas</a>
+
+          <a href="roda.html">Rodas</a>
+
+          <a href="pginicial.html">Voltar</a>
+        </nav>
+      </aside>
+
+      <main>
+        <header>
+          <input type="search" placeholder="Pesquisar" />
+
+          <div class="icons">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+        </header>
+
+        <section class="produtos">
+
+          <div class="card">
+            <div class="foto"></div>
+            <div class="baixo">
+              <span>R$ 99,99</span>
+              <button>COMPRAR</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="foto"></div>
+            <div class="baixo">
+              <span>R$ 99,99</span>
+              <button>COMPRAR</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="foto"></div>
+            <div class="baixo">
+              <span>R$ 99,99</span>
+              <button>COMPRAR</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="foto"></div>
+            <div class="baixo">
+              <span>R$ 99,99</span>
+              <button>COMPRAR</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="foto"></div>
+            <div class="baixo">
+              <span>R$ 99,99</span>
+              <button>COMPRAR</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="foto"></div>
+            <div class="baixo">
+              <span>R$ 99,99</span>
+              <button>COMPRAR</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="foto"></div>
+            <div class="baixo">
+              <span>R$ 99,99</span>
+              <button>COMPRAR</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="foto"></div>
+            <div class="baixo">
+              <span>R$ 99,99</span>
+              <button>COMPRAR</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="foto"></div>
+            <div class="baixo">
+              <span>R$ 99,99</span>
+              <button>COMPRAR</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="foto"></div>
+            <div class="baixo">
+              <span>R$ 99,99</span>
+              <button>COMPRAR</button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script>
+      document.querySelectorAll('.card button').forEach((botao, index) => {
+        botao.addEventListener('click', () => {
+          const produtos = [
+            { nome: 'Parachoque esportivo', preco: 'R$ 480,00', descricao: 'Peça externa em ótimo estado.', imagem: 'imagens/Parachoque-Fusca.png', categoria: 'Peças externas', detalhes: 'Ideal para reposição e restauração.' },
+            { nome: 'Grade vintage', preco: 'R$ 360,00', descricao: 'Grade clássica com acabamento especial.', imagem: 'imagens/pecaexternas.png', categoria: 'Peças externas', detalhes: 'Modelo clássico para personalização.' },
+            { nome: 'Espelho retrovisor', preco: 'R$ 190,00', descricao: 'Espelho com acabamento original.', imagem: 'imagens/pecaexternas.png', categoria: 'Peças externas', detalhes: 'Modelo compatível com vários carros antigos.' }
+          ];
+          const produto = produtos[index] || produtos[0];
+          const params = new URLSearchParams(produto).toString();
+          window.location.href = `compra.html?${params}`;
+        });
+      });
+    </script>
+  </body>
+</html>

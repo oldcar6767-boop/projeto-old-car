@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Old Car - Confirmação de Compra</title>
+    <link rel="stylesheet" href="css-old-car/compra.css" />
+  </head>
+  <body>
+    <div class="topbar">
+      <a href="pginicial.html">← Voltar</a>
+      <img class="logo-img" src="imagens/logo_oldcar.png" alt="Old Car 1980" />
+      <a href="carrinho.html">Carrinho</a>
+    </div>
+
+    <main class="confirmacao">
+      <section class="card-produto">
+        <img id="produto-imagem" class="imagem-produto" src="imagens/lataria.png" alt="Produto selecionado" />
+        <div class="detalhes">
+          <p id="produto-categoria" class="categoria">Peça clássica</p>
+          <h1 id="produto-nome">Produto selecionado</h1>
+          <p id="produto-descricao" class="descricao">Detalhes completos do item escolhido aparecerão aqui.</p>
+          <div class="preco-line">
+            <span id="produto-preco" class="preco">R$ 0,00</span>
+            <span class="status">Em estoque</span>
+          </div>
+          <ul class="lista-info">
+            <li>Entrega em até 3 dias úteis</li>
+            <li>Garantia de 6 meses</li>
+            <li>Frete grátis acima de R$ 300</li>
+          </ul>
+          <div class="acoes">
+            <button id="btn-confirmar" class="btn-confirmar">Confirmar compra</button>
+            <a href="carrinho.html" class="btn-secundario">Ver carrinho</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="js-old-car/compra.js"></script>
+  </body>
+</html>

@@ -1,0 +1,166 @@
+:root {
+  --bg: #f9cfa8;
+  --wine: #6e1a1a;
+  --card-bg: linear-gradient(180deg, #fbe3cf, #f9cfa8);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  color: var(--wine);
+  padding: 30px 40px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.topbar .btn-voltar {
+  text-decoration: none;
+  color: var(--wine);
+  font-weight: bold;
+  padding: 8px 12px;
+  border: 2px solid var(--wine);
+  border-radius: 999px;
+  background: rgba(255,255,255,0.5);
+}
+
+.logo-img {
+  height: 100px;
+  object-fit: contain;
+}
+
+.container {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.lista-produtos {
+  flex: 2;
+}
+
+.resumo-compra {
+  flex: 1;
+  max-width: 350px;
+  border: 2px solid var(--wine);
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.toolbar button {
+  border: none;
+  border-radius: 999px;
+  padding: 8px 12px;
+  cursor: pointer;
+  background: var(--wine);
+  color: white;
+  font-weight: bold;
+}
+
+.produto {
+  border: 2px solid var(--wine);
+  border-radius: 18px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+  position: relative;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.produto .checkbox-item {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--wine);
+  cursor: pointer;
+}
+
+.produto img {
+  width: 120px;
+  height: 150px;
+  border: 2px solid var(--wine);
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.produto .infos {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.produto h3 {
+  margin: 0;
+}
+
+.produto p {
+  margin: 0;
+}
+
+.resumo-compra h2 {
+  margin: 0;
+  padding: 16px 20px;
+  border-bottom: 2px solid var(--wine);
+  font-size: 18px;
+}
+
+.resumo-corpo {
+  padding: 16px 20px;
+}
+
+.total-linha {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  margin-bottom: 18px;
+}
+
+.btn-comprar {
+  display: block;
+  width: 100%;
+  background: linear-gradient(180deg, #c0392b, #7a1f1f);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 0;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.mensagem-vazia {
+  padding: 20px;
+  text-align: center;
+  border: 2px dashed var(--wine);
+  border-radius: 18px;
+}
+
+.btn-remover {
+  background: #efc9a3;
+  border: none;
+  border-radius: 999px;
+  padding: 8px 10px;
+  cursor: pointer;
+  color: var(--wine);
+  font-weight: bold;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>editar perfil</title>
+    <link rel="stylesheet" href="css-old-car/perfil.css">
+</head>
+<body>
+ 
+<div class="container">
+   <h2>Editar Perfil</h2>
+   <form id="formPerfil" action="#" method="POST">
+       <div class="form-grid">
+           
+           <div class="form-group full-width">
+               <label for="nome">Nome Completo</label>
+               <input type="text" id="nome" name="nome" placeholder="Ex: ana caio yasmin leandro lucas samuel" required minlength="3">
+           </div>
+ 
+           
+           <div class="form-group full-width">
+             <label for="email">E-mail</label>
+             <input type="email" id="email" name="email"  placeholder=" Ex: joao@gmail.com">
+         </div>
+
+           <div class="form-group">
+               <label for="rua">Rua</label>
+               <input type="text" id="rua" name="rua" required>
+           </div>
+ 
+           <div class="form-group">
+               <label for="bairro">Bairro</label>
+               <input type="text" id="bairro" name="bairro" required>
+           </div>
+
+           <div class="form-group">
+               <label for="numero">CEP</label>
+               <input type="text" id="numero" name="numero" placeholder="12345-678" maxlength="9" required>
+           </div>
+ 
+           <div class="form-group">
+               <label for="municipio">Município</label>
+               <input type="text" id="municipio" name="municipio" required>
+           </div>
+ 
+           <div class="form-group full-width">
+               <label for="telefone">CPF</label>
+               <input type="text" id="telefone" name="telefone" placeholder="123.456.789-00" maxlength="14" required>
+           </div>
+           </div>
+
+           <button type="submit">salvar alteração</button><BR><BR>
+ 
+       </div>
+   </form>
+</div>
+<script src="js-old-car/perfil.js"></script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>old-car</title>
+    <link rel="stylesheet" href="css-old-car/pginicial.css" />
+  </head>
+  <body>
+    <div class="cabecalho">
+      <img id="imagem" src="imagens/logo_oldcar.png" alt="logo da empresa" />
+      <div class="header-icons">
+        <a href="carrinho.html" class="header-icon cart-link" aria-label="Carrinho">
+          <img src="imagens/carrinho.svg" alt="carrinho" />
+          <span id="cart-count" class="cart-count">0</span>
+        </a>
+        <button type="button" class="header-icon" aria-label="Fale conosco">
+          <a href="faleconosco.html"><img src="imagens/faleconosco.png" alt="fale conosco" /></a>
+        </button>
+        <div class="account-menu">
+          <button type="button" class="header-icon account-toggle" aria-label="Conta">
+            <img class="account-icon" src="imagens/conta.png" alt="conta" />
+          </button>
+          <div class="account-dropdown" aria-hidden="true">
+            <a href="cadastro.html"><button type="button" class="account-option">Cadastrar</button></a>
+            <a href="perfil.html"><button type="button" class="account-option">Editar perfil</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <ul>
+        <li>
+          <a href="lataria.html" class="category-button" aria-label="Ir para Lataria">
+            <img
+              class="imagens"
+              src="imagens/lataria.png"
+              alt="lataria de um carro antigo"
+            />
+            <span>Lataria</span>
+          </a>
+        </li>
+        <li>
+          <a href="pecaexterna.html" class="category-button" aria-label="Ir para Externas">
+            <img
+              class="imagens"
+              src="imagens/pecaexternas.png"
+              alt="peças externas de um carro antigo"
+            />
+            <span>Externas</span>
+          </a>
+        </li>
+        <li>
+          <a href="pecainterna.html" class="category-button" aria-label="Ir para Internas">
+            <img
+              class="imagens"
+              src="imagens/pecainterna.png"
+              alt="peças internas de um carro antigo"
+            />
+            <span>Internas</span>
+          </a>
+        </li>
+        <li>
+          <a href="roda.html" class="category-button" aria-label="Ir para Rodas">
+            <img
+              class="imagens"
+              src="imagens/roda.png"
+              alt="rodas de um carro antigo"
+            />
+            <span>Rodas</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <h2>
+      Peças em<br />
+      Promoção
+    </h2>
+    <div class="produtos-wrapper">
+      <button
+        class="nav-button prev"
+        type="button"
+        aria-label="Produto anterior"
+      >
+        ‹
+      </button>
+      <div class="produtos">
+        <div class="produto">
+          <img src="imagens/roda-opala.png" alt="roda de um Opala antigo" />
+          <div class="descricao">
+            <h3>Roda de Opala</h3>
+            <p>Roda de Opala antiga, em ótimo estado de conservação.</p>
+            <p class="preco">R$ 500,00</p>
+          </div>
+          <button type="button" class="buy-button" data-nome="Roda de Opala" data-preco="R$ 500,00" data-descricao="Roda de Opala antiga, em ótimo estado de conservação." data-imagem="imagens/roda-opala.png" data-categoria="Rodas" data-detalhes="Modelo clássico para restauração.">Comprar</button>
+        </div>
+        <div class="produto">
+          <img src="imagens/parachoque-fusca.png" alt="parachoque de fusca" />
+          <div class="descricao">
+            <h3>Parachoque de Fusca</h3>
+            <p>
+              Parachoque com Puleiro Fusca 1971 a 1996 BELFEX
+            </p>
+            <p class="preco">R$ 1.500,00</p>
+          </div>
+          <button type="button" class="buy-button" data-nome="Parachoque de Fusca" data-preco="R$ 1.500,00" data-descricao="Parachoque com Puleiro Fusca 1971 a 1996 BELFEX." data-imagem="imagens/Parachoque-Fusca.png" data-categoria="Peças externas" data-detalhes="Peça original e completa para restauração.">Comprar</button>
+        </div>
+        <div class="produto">
+          <img
+            src="imagens/escapamento-chevette.png"
+            alt="kit escapamento chevette"
+          />
+          <div class="descricao">
+            <h3>Kit Escapamento</h3>
+            <p>Kit Escapamento Tubo + Silencioso Chevette Sedan 1.6 77 A 91</p>
+            <p class="preco">R$ 405,45</p>
+          </div>
+          <button type="button" class="buy-button" data-nome="Kit Escapamento" data-preco="R$ 405,45" data-descricao="Kit Escapamento Tubo + Silencioso Chevette Sedan 1.6 77 A 91." data-imagem="imagens/escapamento-chevette.png" data-categoria="Peças externas" data-detalhes="Material resistente e com bom desempenho.">Comprar</button>
+        </div>
+      </div>
+      <button
+        class="nav-button next"
+        type="button"
+        aria-label="Próximo produto"
+      >
+        ›
+      </button>
+    </div>
+    <div class="slider-dots" aria-label="Indicadores do carrossel"></div>
+    <footer>
+      <p id="copyright">&copy; 2023 Old Car. Todos os direitos reservados.</p>
+    </footer>
+    <script src="js-old-car/pginicial.js">
+    </script>
+    <script>
+      const cartCount = document.getElementById('cart-count');
+
+      function atualizarContadorCarrinho() {
+        const carrinho = JSON.parse(localStorage.getItem('carrinhoOldCar') || '[]');
+        cartCount.textContent = carrinho.length;
+      }
+
+      document.querySelectorAll('.buy-button').forEach((botao) => {
+        botao.addEventListener('click', () => {
+          const params = new URLSearchParams({
+            nome: botao.dataset.nome,
+            preco: botao.dataset.preco,
+            descricao: botao.dataset.descricao,
+            imagem: botao.dataset.imagem,
+            categoria: botao.dataset.categoria,
+            detalhes: botao.dataset.detalhes
+          });
+          window.location.href = `compra.html?${params.toString()}`;
+        });
+      });
+
+      window.addEventListener('storage', atualizarContadorCarrinho);
+      window.addEventListener('load', atualizarContadorCarrinho);
+      document.addEventListener('visibilitychange', () => {
+        if (!document.hidden) {
+          atualizarContadorCarrinho();
+        }
+      });
+    </script>
+  </body>
+</html>

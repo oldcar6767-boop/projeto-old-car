@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css-old-car/roda.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <title>Old Car</title>
+  </head>
+  <body>
+    <div class="container">
+      <aside class="sidebar">
+        <img alt="logo old car" src="imagens/logo_oldcar.png" class="logo" />
+
+        <nav>
+          <a href="pecaexterna.html">Peças externas</a>
+
+          <a href="pecainterna.html">Peças internas</a>
+
+          <a href="lataria.html">Lataria</a>
+
+          <a href="pginicial.html">Voltar</a>
+        </nav>
+      </aside>
+
+      <main>
+        <header>
+          <input type="search" placeholder="Pesquisar" />
+
+          <div class="icons">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+        </header>
+
+        <section class="produtos">
+
+          <div class="card">
+            <div class="foto"></div>
+            <div class="baixo">
+              <span>R$ 99,99</span>
+              <button>COMPRAR</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="foto"></div>
+            <div class="baixo">
+              <span>R$ 99,99</span>
+              <button>COMPRAR</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="foto"></div>
+            <div class="baixo">
+              <span>R$ 99,99</span>
+              <button>COMPRAR</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="foto"></div>
+            <div class="baixo">
+              <span>R$ 99,99</span>
+              <button>COMPRAR</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="foto"></div>
+            <div class="baixo">
+              <span>R$ 99,99</span>
+              <button>COMPRAR</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="foto"></div>
+            <div class="baixo">
+              <span>R$ 99,99</span>
+              <button>COMPRAR</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="foto"></div>
+            <div class="baixo">
+              <span>R$ 99,99</span>
+              <button>COMPRAR</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="foto"></div>
+            <div class="baixo">
+              <span>R$ 99,99</span>
+              <button>COMPRAR</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="foto"></div>
+            <div class="baixo">
+              <span>R$ 99,99</span>
+              <button>COMPRAR</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="foto"></div>
+            <div class="baixo">
+              <span>R$ 99,99</span>
+              <button>COMPRAR</button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script>
+      document.querySelectorAll('.card button').forEach((botao, index) => {
+        botao.addEventListener('click', () => {
+          const produtos = [
+            { nome: 'Roda de Opala', preco: 'R$ 500,00', descricao: 'Roda clássica em ótimo estado de conservação.', imagem: 'imagens/roda-opala.png', categoria: 'Rodas', detalhes: 'Modelo muito procurado para restauração.' },
+            { nome: 'Roda de Fusca', preco: 'R$ 420,00', descricao: 'Roda original para veículo clássico.', imagem: 'imagens/roda.png', categoria: 'Rodas', detalhes: 'Boa durabilidade e acabamento.' },
+            { nome: 'Roda esportiva', preco: 'R$ 560,00', descricao: 'Modelo mais moderno para carros antigos.', imagem: 'imagens/roda.png', categoria: 'Rodas', detalhes: 'Combina estilo e desempenho.' }
+          ];
+          const produto = produtos[index] || produtos[0];
+          const params = new URLSearchParams(produto).toString();
+          window.location.href = `compra.html?${params}`;
+        });
+      });
+    </script>
+  </body>
+</html>

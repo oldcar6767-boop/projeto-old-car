@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="css-old-car/cadastro.css">
+    <script src="js-old-car/cadastro.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h1>Faça Seu Cadastro</h1>
+    <form action="#" method="POST">
+        <div class="form-grid">
+            
+            <div class="form-group full-width">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" name="nome" placeholder="Nome completo" required minlength="3">
+            </div>
+            <div class="form-group full-width">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Email" required data-mask="email">
+            </div>
+            <div class="form-group full-width">
+                <label for="senha">Senha</label>
+                <div class="password-wrapper">
+                    <input type="password" id="senha" name="senha" placeholder="Senha" required minlength="6">
+                    <span class="toggle-password" data-target="senha" role="button" tabindex="0">Mostrar</span>
+                </div>
+            </div>
+            <br>
+            <div class="form-group full-width">
+                <label for="cpf">CPF</label>
+                <input type="text" id="cpf" name="cpf" placeholder="XXX.XXX.XXX-XX" required maxlength="14" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" inputmode="numeric" data-mask="cpf">
+            </div>
+            <br>
+            <div class="container2 full-width">
+                <div class="form-group">
+                        <label for="cep">CEP</label>
+                        <input type="text" id="cep" name="cep" required maxlength="9" inputmode="numeric" placeholder="XXXXX-XXX" pattern="\d{5}-\d{3}" data-mask="cep">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="rua">Rua</label>
+                        <input type="text" id="rua" name="rua" required minlength="3">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="municipio">Município</label>
+                        <input type="text" id="municipio" name="municipio" required minlength="3">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="estado">Estado</label>
+                        <input type="text" id="estado" name="estado" required minlength="3">
+                    </div>
+                    </div>
+            </div>
+            <button type="submit"><a href="pginicial.html">Cadastrar</a></button> 
+            <h2><a id="link" href="login.html">Entrar com Login</a></h2>
+    </form>
+</body>
+</html>

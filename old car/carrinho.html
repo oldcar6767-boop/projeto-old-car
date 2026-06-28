@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Old Car 1980 - Carrinho</title>
+    <link rel="stylesheet" href="css-old-car/carrinho.css" />
+  </head>
+  <body>
+    <div class="topbar">
+      <a class="btn-voltar" href="pginicial.html">← Voltar para a página inicial</a>
+      <a href="pginicial.html"><img class="logo-img" src="imagens/logo_oldcar.png" alt="Old Car 1980" /></a>
+    </div>
+
+    <div class="container">
+      <div class="lista-produtos">
+        <div class="toolbar">
+          <button id="btn-selecionar-todos" type="button">Selecionar todos</button>
+          <span id="contador-selecionados">0 item(s) selecionado(s)</span>
+        </div>
+        <div id="lista-produtos"></div>
+      </div>
+
+      <div class="resumo-compra">
+        <h2>Total da Compra</h2>
+        <div class="resumo-corpo">
+          <div class="total-linha">
+            <span>Total:</span>
+            <span id="total-carrinho">R$ 0,00</span>
+          </div>
+          <button class="btn-comprar" id="btn-confirmar-pedido">CONFIRMAR PEDIDO</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js-old-car/carrinho.js"></script>
+  </body>
+</html>

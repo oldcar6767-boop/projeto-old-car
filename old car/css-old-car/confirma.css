@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+            --primary-color: #69020b;
+            --bg-color: #ffceaa;
+            --text-color: #333;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            display: flex; /* Flexbox para centralizar o formulário na tela */
+            justify-content: center;
+            align-items: center;
+            min-width: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        .container{
+             background: #ffe9d9;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            width: 27%;
+            max-width: 600px;
+            position: relative;
+            top: 170px;   
+        }
+                h1 {
+            text-align: center;
+            color: #000000;
+            margin-bottom: 60px;
+        }
+        /* Utilizando CSS Grid para o layout das colunas */
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Duas colunas em telas maiores */
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Ocupar a largura inteira em campos específicos */
+        .full-width {
+            grid-column: span 2;
+        }
+
+        label {
+            margin-bottom: 10px;
+            font-weight: 700;
+            color: #000000;
+        }
+
+        input, select {
+            padding: 10px 5px;
+            border: none;
+            border-bottom: 3px solid #c92a0e;
+            border-radius: 0;
+            font-size: 16px;
+            background: transparent;
+            transition: border-color 0.3s;
+        }
+
+        input:focus, select:focus {
+            border-bottom: 2px solid var(--primary-color);
+            outline: none;
+        }
+        .gender-group {
+            display: flex;
+            gap: 20px;
+            padding-top: 10px;
+        }
+
+        .gender-option {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        button {
+            display: block;
+            margin: 20px auto;
+            grid-column: 1 / -1; /* ocupa toda a linha do grid */
+            justify-self: center;
+            width: fit-content; /* faz o botão ficar só do tamanho do conteúdo */
+            padding: 15px 40px; /* deixa mais largo */
+            background: linear-gradient(to right, #69020b 20%, #c92a0e 100%);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+            background-size: 200% 100%; /* para o efeito de transição */
+            background-position: left center; /* posição inicial do gradiente */
+            transition: background-position 0.3s, color 0.3s; /* transição suave para o efeito hover */ 
+        }
+
+        button:hover {
+            background-position: right center; /* move o gradiente para a direita no hover */
+            color: #ffffff;
+            text-decoration: none; /* remove o sublinhado do link no hover */
+        }
+ 
+         a{
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+         @media (max-width: 600px) {
+            .form-grid {
+                grid-template-columns: 1fr; /* Muda para uma coluna em telas pequenas */
+            }
+            .full-width {
+                grid-column: span 1;
+            }
+            button {
+                grid-column: span 1;
+            }
+        }

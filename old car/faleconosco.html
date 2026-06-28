@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="css-old-car/faleconosco.css">
+</head>
+
+<body>
+
+    <div class="container">
+            <div class="cabecalho">
+                <img src="imagens/conta.png" alt="sua conta">
+                <div class="texto">
+                    <h2>Teve alguma duvuda?</h2>
+                    <h3> FALE CONOSCO</h3>
+                </div>
+                <img id="logo" src="imagens/logo_oldcar.png" alt="logo_oldcar">
+            </div>
+            <br><br>
+            <form id="formulario" action="#" method="POST">
+                <div class="form-grid">
+            
+                    <div class="form-group">
+                        <label for="email">Digite seu e-mail</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Seu e-mail aqui"
+                            required
+                        >
+                    </div>
+            
+                    <br>
+            
+                    <div class="form-group">
+                        <label for="reclamacao">Qual sua reclamação</label>
+                        <select name="reclamacao" id="reclamacao" required>
+                            <option value="">Selecione o problema</option>
+                            <option value="errodecompra">Erro na compra</option>
+                            <option value="problemacarrinho">Problema no carrinho</option>
+                            <option value="erropagina">Erro na página</option>
+                            <option value="problemaconta">Problema em editar perfil</option>
+                        </select>
+                    </div>
+            
+                    <div class="form-group full-width">
+                        <label for="problema">Digite sua dúvida ou reclamação</label>
+                        <input
+                            type="text"
+                            id="problema"
+                            name="problema"
+                            placeholder="Seu problema aqui..."
+                            required
+                        >
+                    </div>
+            
+                    <br>
+            
+                    <button id="botao" type="submit" disabled>Enviar</button>
+            
+                </div>
+            </form>
+            
+            <script src="js-old-car/faleconosco.js"></script>
+            </script>
+</body>
+</html>

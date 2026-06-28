@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css-old-car/login.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Login</h1>
+    <form id="loginForm" action="#" method="POST">
+        <div class="form-grid">
+            <div class="form-group full-width">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="form-group full-width">
+                <label for="senha">Senha</label>
+                <div class="password-wrapper">
+                    <input type="password" id="senha" name="senha" placeholder="Senha" required minlength="6">
+                    <button type="button" class="toggle-password" data-target="senha">Mostrar</button>
+                </div>
+                <h2><a href="confirma.html">Esqueci minha senha</a></h2>
+            </div>
+            <br>
+            </div>
+            <button type="submit" id="botao">Entrar</button> 
+            <h2 id="centro"><a href="cadastro.html">Cadastre-se</a></h2>
+    </form>
+</div>
+<script src="js-old-car/cadastro.js"></script>
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+        window.location.href = 'pginicial.html';
+    });
+</script>
+</body>
+</html>
